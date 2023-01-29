@@ -1,4 +1,4 @@
-nombre=input('Ingrese el nombre de la imagen con su extensión:','s');
+nombre=input('Ingrese el nombre de la imagen con su extensiÃ³n:','s');
 imagen=imread(nombre);
 gris=color2gris(imagen);
 [a,b]=size(gris);
