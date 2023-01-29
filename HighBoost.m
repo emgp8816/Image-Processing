@@ -1,22 +1,22 @@
-nombre=input('Ingrese el nombre de la imagen con su extensión:','s');
-n=input('Ingrese el tamaño de la máscara (número impar) = ');
+nombre=input('Ingrese el nombre de la imagen con su extensiÃ³n:','s');
+n=input('Ingrese el tamaÃ±o de la mÃ¡scara (nÃºmero impar) = ');
 A=input('A = ');
-%Lectura de imagen, y transformación a gris
+%Lectura de imagen, y transformaciÃ³n a gris
 imagen=imread(nombre);
 gris=color2gris(imagen);
 subplot(2,2,1),imshow(gris/255),title('Imagen original')
 
-%Obtención de parametros para el ciclo for
+%Obtencion de parametros para el ciclo for
 [a,b]=size(gris);
 limite=floor(n/2);
 start=ceil(n/2);
 
-%Declaración de la máscara y matriz para el filtro high boost
+%Declaracion de la mÃ¡scara y matriz para el filtro high boost
 highb=zeros(a-2*limite,b-2*limite);
 mask=-(1/n^2)*ones(n);
 mask(start,start)=(1/n^2)*(n^2*A-1);
 
-%Declaración de la máscara y matriz para el filtro high boost usando filtro
+%Declaracion de la mÃ¡scara y matriz para el filtro high boost usando filtro
 %pasabajas
 fpb=zeros(a-2*limite,b-2*limite);
 highb1=zeros(a-2*limite,b-2*limite);
@@ -35,7 +35,7 @@ end
 
 highb1=A*gris(start:a-limite, start:b-limite)-fpb;
 
-str=sprintf('Filtro High Boost de orden %d usando máscara',n);
+str=sprintf('Filtro High Boost de orden %d usando mÃ¡scara',n);
 subplot(2,2,2),imshow(highb/255),title(str)
 
 str=sprintf('Filtro High Boost de orden %d empleando filtro pasabajas',n);
