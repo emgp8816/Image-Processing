@@ -29,8 +29,8 @@ azulgris=color(:,:,3);
 
 figure,subplot(221),imshow(color),subplot(222),imshow(rojogris), subplot(223),imshow(verdegris),subplot(224),imshow(azulgris)
 figure,subplot(221),imshow(gris),subplot(222),imshow(rojogris), subplot(223),imshow(verdegris),subplot(224),imshow(azulgris)
-%Las partes brillantes son las m·s altas en los tonos de cada capa, los mas
-%obscuros son los que tienen valores m·s bajos en la matriz.
+%Las partes brillantes son las m√°s altas en los tonos de cada capa, los mas
+%obscuros son los que tienen valores m√°s bajos en la matriz.
 
 figure,mesh(gris),colormap(cool())
 %Las partes brillantes son lo spuntos mas altos de la grafica, y los mas
