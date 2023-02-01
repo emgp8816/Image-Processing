@@ -4,7 +4,7 @@ gris=color2gris(imagen);
 imshow(gris/255)
 [a,b]=size(gris);
 umbral=zeros(a,b);
-
+%funcion propia de hitograma
 [f,mn,p] = histogramaimagen(gris);
 
 m0=p(1);
