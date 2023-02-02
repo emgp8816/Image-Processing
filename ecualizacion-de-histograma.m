@@ -2,7 +2,7 @@
 nombre=input('Ingrese el nombre de la imagen: ','s');
 imagen=imread(nombre);
 
-gris=color2gris(imagen);
+gris=rgb2gray(imagen);
 s=zeros(1,256);
 ecualizada=zeros(size(gris));
 
@@ -29,4 +29,4 @@ subplot(2,2,4), [f1,mn1,fr1]=histogramaimagen(ecualizada);
 title('Histograma De Imagen Ecualizada')
 
 figure
-plot(0:255,s),title('Función de Transformación')
+plot(0:255,s),title('FunciÃ³n de TransformaciÃ³n')
