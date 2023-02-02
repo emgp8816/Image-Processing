@@ -1,8 +1,8 @@
 imagen=imread('chemis.jpg');
-gris=color2gris(imagen);
+gris=rgb2gray(imagen);
 subplot(1,2,1),imshow(gris/255)
 
-%Funcion de transformación
+%Funcion de transformaciÃ³n
 negativa=255-gris;
 [y,x]=size(gris);
 
