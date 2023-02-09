@@ -1,14 +1,15 @@
-A=input(' A = ');
-B=input('B = ');
-s1=input('s1 = ');
+
+A=input('Inicio de intervalo A = ');
+B=input('Fin de intervalo B = ');
+s1=input('Nivel de gris s1 = ');
 
 %Transformacion de gris a color
 imagen=imread('chemis.jpg');
-gris=color2gris(imagen);
+gris=rgb2gray(imagen);
 [a,b]=size(gris);
 
 
-%Funcion de transformación
+%Funcion de transformaciÃ³n
 ibinario=zeros(size(gris));
 segmentacion=zeros(size(gris));
  for i=1:a
@@ -39,7 +40,7 @@ x=1:255;
  end
  
  
-subplot(2,2,1),imshow(gris/255)
+subplot(2,2,1),imshow(gris)
 subplot(2,2,2),imshow(uint8(ibinario))
 subplot(2,2,3),plot(x,y,'k'), xlabel('r'), ylabel('s'),axis([0 300 0 300]),grid on
 %r valores en grises orginiales
@@ -47,10 +48,10 @@ subplot(2,2,3),plot(x,y,'k'), xlabel('r'), ylabel('s'),axis([0 300 0 300]),grid 
 title('Binario de una imagen')
 legend('T(r)')
 figure
-subplot(2,2,1),imshow(gris/255)
+subplot(2,2,1),imshow(gris)
 subplot(2,2,2),imshow(uint8(segmentacion))
 subplot(2,2,3),plot(x,y1,'k'), xlabel('r'), ylabel('s'),axis([0 300 0 300]), grid on
-title('Segmentación de una imagen')
+title('SegmentaciÃ³n de una imagen')
 legend('T(r)')
 hold on
 
